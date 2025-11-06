@@ -6,7 +6,7 @@
   <link href="https://www.yechenblog.top/atom.xml" rel="self"/>
   
   <link href="https://www.yechenblog.top/"/>
-  <updated>2025-11-06T13:51:27.830Z</updated>
+  <updated>2025-11-06T16:50:01.790Z</updated>
   <id>https://www.yechenblog.top/</id>
   
   <author>
@@ -17,20 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>4.1 Orthogonality of the four subspaces</title>
+    <link href="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/"/>
+    <id>https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/</id>
+    <published>2025-11-06T16:50:01.000Z</published>
+    <updated>2025-11-06T16:50:01.790Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>未完稿❗️</p><h2 id="总结">总结</h2><p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/conclusion.png"></p><p>对于这些内容接下来会一一解释</p><h2 id="向量之间的正交">向量之间的正交</h2><p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/vectors.png"></p><h2 id="空间之间的正交">空间之间的正交</h2><p>Def:两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交</p><p>Ex: <img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/不正交的两个空间.png" width="200"></p><h3 id="正交补空间">正交补空间</h3><h2 id="四个子空间之间的关系">四个子空间之间的关系</h2><p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/四个子空间之间的关系.png"></p><ol type="1"><li>列空间和左零空间相互正交</li><li>行空间和零空间相互正交</li><li>方程<span class="math inline"><em>A</em><em>x</em> = <em>b</em></span>中的x位于<span class="math inline"><em>R</em><sup><em>n</em></sup></span>空间中</li><li>若矩阵A可逆，则行空间中的所有向量通过作用A都可以到列空间中</li></ol></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</summary>
+    
+    
+    
+    <category term="线性代数" scheme="https://www.yechenblog.top/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+    
+    <category term="线性代数" scheme="https://www.yechenblog.top/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+    <category term="数学" scheme="https://www.yechenblog.top/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>helloworld</title>
     <link href="https://www.yechenblog.top/2025/11/06/helloworld/"/>
     <id>https://www.yechenblog.top/2025/11/06/helloworld/</id>
     <published>2025-11-06T13:51:27.000Z</published>
     <updated>2025-11-06T13:51:27.830Z</updated>
     
-    <content type="html"><![CDATA[<p>Hello world!</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>Hello world!</p></body></html>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;Hello world!&lt;/p&gt;
-</summary>
-      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</summary>
     
     
     

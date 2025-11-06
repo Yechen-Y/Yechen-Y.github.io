@@ -20,17 +20,24 @@
     var CONFIG = {"hostname":"www.yechenblog.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="始于2025年11月7日 大三的我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yechen&#39;s Blog">
-<meta property="og:url" content="https://www.yechenblog.top/archives/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="4.1 Orthogonality of the four subspaces">
+<meta property="og:url" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/index.html">
 <meta property="og:site_name" content="Yechen&#39;s Blog">
-<meta property="og:description" content="始于2025年11月7日 大三的我">
 <meta property="og:locale">
+<meta property="og:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/conclusion.png">
+<meta property="og:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/vectors.png">
+<meta property="og:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/%E4%B8%8D%E6%AD%A3%E4%BA%A4%E7%9A%84%E4%B8%A4%E4%B8%AA%E7%A9%BA%E9%97%B4.png">
+<meta property="og:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/%E5%9B%9B%E4%B8%AA%E5%AD%90%E7%A9%BA%E9%97%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.png">
+<meta property="article:published_time" content="2025-11-06T16:50:01.000Z">
+<meta property="article:modified_time" content="2025-11-06T16:50:01.790Z">
 <meta property="article:author" content="Yechen">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="线性代数">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/conclusion.png">
 
-<link rel="canonical" href="https://www.yechenblog.top/archives/">
+<link rel="canonical" href="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/">
 
 
 <script id="page-configurations">
@@ -38,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Archive | Yechen's Blog</title>
+  <title>4.1 Orthogonality of the four subspaces | Yechen's Blog</title>
   
 
 
@@ -188,70 +195,107 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 2 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Liulian1.png">
+      <meta itemprop="name" content="Yechen">
+      <meta itemprop="description" content="始于2025年11月7日 大三的我">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yechen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          4.1 Orthogonality of the four subspaces
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2025-11-07 00:50:01" itemprop="dateCreated datePublished" datetime="2025-11-07T00:50:01+08:00">2025-11-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>未完稿❗️</p>
+<h2 id="总结">总结</h2>
+<p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/conclusion.png"></p>
+<p>对于这些内容接下来会一一解释</p>
+<h2 id="向量之间的正交">向量之间的正交</h2>
+<p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/vectors.png"></p>
+<h2 id="空间之间的正交">空间之间的正交</h2>
+<p>Def:
+两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交</p>
+<p>Ex: <img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/不正交的两个空间.png" width="200"></p>
+<h3 id="正交补空间">正交补空间</h3>
+<h2 id="四个子空间之间的关系">四个子空间之间的关系</h2>
+<p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/四个子空间之间的关系.png"></p>
+<ol type="1">
+<li>列空间和左零空间相互正交</li>
+<li>行空间和零空间相互正交</li>
+<li>方程<span class="math inline"><em>A</em><em>x</em> = <em>b</em></span>中的x位于<span class="math inline"><em>R</em><sup><em>n</em></sup></span>空间中</li>
+<li>若矩阵A可逆，则行空间中的所有向量通过作用A都可以到列空间中</li>
+</ol>
+</body></html>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-07T00:50:01+08:00"
-              content="2025-11-07">
-          11-07
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag"># 线性代数</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/" itemprop="url">
-            <span itemprop="name">4.1 Orthogonality of the four subspaces</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-06T21:51:27+08:00"
-              content="2025-11-06">
-          11-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/06/helloworld/" itemprop="url">
-            <span itemprop="name">helloworld</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        
 
 
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/06/helloworld/" rel="prev" title="helloworld">
+      <i class="fa fa-chevron-left"></i> helloworld
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
@@ -304,6 +348,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E4%BA%A4"><span class="nav-number">2.</span> <span class="nav-text">向量之间的正交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AD%A3%E4%BA%A4"><span class="nav-number">3.</span> <span class="nav-text">空间之间的正交</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E8%A1%A5%E7%A9%BA%E9%97%B4"><span class="nav-number">3.1.</span> <span class="nav-text">正交补空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E4%B8%AA%E5%AD%90%E7%A9%BA%E9%97%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.</span> <span class="nav-text">四个子空间之间的关系</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
