@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yechen&#39;s Blog</title>
+  
+  <subtitle>随便写写</subtitle>
+  <link href="https://www.yechenblog.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.yechenblog.top/"/>
+  <updated>2025-11-06T13:51:27.830Z</updated>
+  <id>https://www.yechenblog.top/</id>
+  
+  <author>
+    <name>Yechen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>helloworld</title>
+    <link href="https://www.yechenblog.top/2025/11/06/helloworld/"/>
+    <id>https://www.yechenblog.top/2025/11/06/helloworld/</id>
+    <published>2025-11-06T13:51:27.000Z</published>
+    <updated>2025-11-06T13:51:27.830Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello world!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hello world!&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
