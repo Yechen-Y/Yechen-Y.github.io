@@ -20,17 +20,23 @@
     var CONFIG = {"hostname":"www.yechenblog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://www.yechenblog.top/tags/index.html">
+  <meta name="description" content="未完稿 ❗️  Verilator的工作原理    * 我们需要使用 C++ 编写激励文件。显然，我们不能在 testbench 中直接调用我们 .v 中的模块，所以我们要通过 Verilator 将其转化为 C++ 文件再进行调用，Verilator 为我们提供了顶层模块输入&#x2F;输出引脚的接口，使我们得以对顶层模块的输入信号赋值或读取其输出信号。          * Verilator 会生成一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识Verilator">
+<meta property="og:url" content="https://www.yechenblog.top/2025/11/07/%E5%88%9D%E8%AF%86Verilator/index.html">
 <meta property="og:site_name" content="Yechen&#39;s Blog">
+<meta property="og:description" content="未完稿 ❗️  Verilator的工作原理    * 我们需要使用 C++ 编写激励文件。显然，我们不能在 testbench 中直接调用我们 .v 中的模块，所以我们要通过 Verilator 将其转化为 C++ 文件再进行调用，Verilator 为我们提供了顶层模块输入&#x2F;输出引脚的接口，使我们得以对顶层模块的输入信号赋值或读取其输出信号。          * Verilator 会生成一">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-11-06T05:20:52.000Z">
-<meta property="article:modified_time" content="2025-11-06T07:38:11.549Z">
+<meta property="og:image" content="https://www.yechenblog.top/2025/11/07/%E5%88%9D%E8%AF%86Verilator/Verilator%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.png">
+<meta property="article:published_time" content="2025-11-07T14:57:00.000Z">
+<meta property="article:modified_time" content="2025-11-07T14:57:00.987Z">
 <meta property="article:author" content="Yechen">
+<meta property="article:tag" content="一生一芯">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.yechenblog.top/2025/11/07/%E5%88%9D%E8%AF%86Verilator/Verilator%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.png">
 
-<link rel="canonical" href="https://www.yechenblog.top/tags/">
+<link rel="canonical" href="https://www.yechenblog.top/2025/11/07/%E5%88%9D%E8%AF%86Verilator/">
 
 
 <script id="page-configurations">
@@ -38,13 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>tags | Yechen's Blog
-</title>
+  <title>初识Verilator | Yechen's Blog</title>
   
 
 
@@ -192,51 +197,114 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yechenblog.top/2025/11/07/%E5%88%9D%E8%AF%86Verilator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Liulian1.png">
+      <meta itemprop="name" content="Yechen">
+      <meta itemprop="description" content="道路曲折 光明在前">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yechen's Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初识Verilator
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              <time title="创建时间：2025-11-07 22:57:00" itemprop="dateCreated datePublished" datetime="2025-11-07T22:57:00+08:00">2025-11-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" itemprop="url" rel="index"><span itemprop="name">一生一芯</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>未完稿 ❗️</p>
+<h2 id="verilator的工作原理">Verilator的工作原理</h2>
+<p><img src="/2025/11/07/%E5%88%9D%E8%AF%86Verilator/Verilator使用指南.png"></p>
+<ul>
+<li><p>我们需要使用 C++ 编写激励文件。显然，我们不能在 testbench
+中直接调用我们 .v 中的模块，所以我们要通过 Verilator 将其转化为 C++
+文件再进行调用，Verilator
+为我们提供了顶层模块输入/输出引脚的接口，使我们得以对顶层模块的输入信号赋值或读取其输出信号。</p></li>
+<li><p>Verilator 会生成一个 Makefile 脚本，利用 GCC 等编译器将生成的 C++
+文件和我们编写的激励文件编译成成用于仿真的可执行文件。</p></li>
+</ul>
+<h2 id="verilator-files">Verilator Files</h2>
+<h2 id="verilator-command">Verilator Command</h2>
+<h3 id="verilation生成可供调用的-c-文件">verilation(生成可供调用的 C++
+文件)</h3>
+<figure class="highlight bash"><figcaption><span>shell</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;verilator --cc [--top &lt;top-name&gt;] VerilogSourcefile</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li><code>--cc</code>:指定将 Verilog 转化为 C++ 代码</li>
+<li><code>--top</code>:当有多个Verilog 源文件的时候需要指定顶层模块</li>
+</ul>
+<h3 id="编写testbench">编写testbench</h3>
+<h2 id="示例双控开关">示例（双控开关）</h2>
+<figure class="highlight verilog"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top(</span><br><span class="line">  <span class="keyword">input</span> a,</span><br><span class="line">  <span class="keyword">input</span> b,</span><br><span class="line">  <span class="keyword">output</span> f</span><br><span class="line">);</span><br><span class="line">  <span class="keyword">assign</span> f = a ^ b;</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></tbody></table></figure>
+</body></html>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag"># 一生一芯</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/07/%E9%9A%8F%E8%AE%B01/" rel="prev" title="随记1">
+      <i class="fa fa-chevron-left"></i> 随记1
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 7 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 12px; color: #ccc">一生一芯</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%81/" style="font-size: 12px; color: #ccc">信息论与编码</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 12px; color: #ccc">工具</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 12px; color: #ccc">数学</a> <a href="/tags/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/" style="font-size: 12px; color: #ccc">本科课程</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 12px; color: #ccc">线性代数</a> <a href="/tags/%E9%9A%8F%E8%AE%B0/" style="font-size: 12px; color: #ccc">随记</a>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -287,6 +355,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#verilator%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">Verilator的工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#verilator-files"><span class="nav-number">2.</span> <span class="nav-text">Verilator Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#verilator-command"><span class="nav-number">3.</span> <span class="nav-text">Verilator Command</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#verilation%E7%94%9F%E6%88%90%E5%8F%AF%E4%BE%9B%E8%B0%83%E7%94%A8%E7%9A%84-c-%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">verilation(生成可供调用的 C++
+文件)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99testbench"><span class="nav-number">3.2.</span> <span class="nav-text">编写testbench</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E5%8F%8C%E6%8E%A7%E5%BC%80%E5%85%B3"><span class="nav-number">4.</span> <span class="nav-text">示例（双控开关）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
