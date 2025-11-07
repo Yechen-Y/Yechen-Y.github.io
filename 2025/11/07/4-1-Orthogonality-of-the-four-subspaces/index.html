@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"www.yechenblog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="总结   对于这些内容接下来会一一解释  向量之间的正交   空间之间的正交 Def: 两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交  Ex:   正交补空间 直观上：子空间U和正交补空间U⟂的和构成了整个空间，即该空间中的一个向量可以分解为U中的一个向量加上U⟂中的一个向量。  若U和U⟂都为Rn的子空间，则有以下性质   1. dimU+dimU⟂&#x3D;n  四个子空间">
+  <meta name="description" content="总结   对于这些内容接下来会一一解释  向量之间的正交   空间之间的正交 Def: 两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交  Ex:   正交补空间 直观上：子空间\(U\)和正交补空间\(U^{\perp}\)的和构成了整个空间，即该空间中的一个向量可以分解为\(U\)中的一个向量加上\(U^\perp\)中的一个向量。  若\(U\)和\(U\perp\)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4.1 Orthogonality of the four subspaces">
 <meta property="og:url" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/index.html">
 <meta property="og:site_name" content="Yechen&#39;s Blog">
-<meta property="og:description" content="总结   对于这些内容接下来会一一解释  向量之间的正交   空间之间的正交 Def: 两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交  Ex:   正交补空间 直观上：子空间U和正交补空间U⟂的和构成了整个空间，即该空间中的一个向量可以分解为U中的一个向量加上U⟂中的一个向量。  若U和U⟂都为Rn的子空间，则有以下性质   1. dimU+dimU⟂&#x3D;n  四个子空间">
+<meta property="og:description" content="总结   对于这些内容接下来会一一解释  向量之间的正交   空间之间的正交 Def: 两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交  Ex:   正交补空间 直观上：子空间\(U\)和正交补空间\(U^{\perp}\)的和构成了整个空间，即该空间中的一个向量可以分解为\(U\)中的一个向量加上\(U^\perp\)中的一个向量。  若\(U\)和\(U\perp\)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/conclusion.png">
 <meta property="og:image" content="https://www.yechenblog.top/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/vectors.png">
@@ -256,7 +256,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h2 id="总结">总结</h2>
+        <html><head><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"></head><body><h2 id="总结">总结</h2>
 <p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/conclusion.png"></p>
 <p>对于这些内容接下来会一一解释</p>
 <h2 id="向量之间的正交">向量之间的正交</h2>
@@ -266,17 +266,17 @@
 两个空间相互正交，即在这两个空间中，分别取任意一个向量，这两个向量都正交</p>
 <p>Ex: <img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/不正交的两个空间.png" width="200"></p>
 <h3 id="正交补空间">正交补空间</h3>
-<p>直观上：子空间<span class="math inline"><em>U</em></span>和正交补空间<span class="math inline"><em>U</em><sup>⟂</sup></span>的和构成了整个空间，即该空间中的一个向量可以分解为<span class="math inline"><em>U</em></span>中的一个向量加上<span class="math inline"><em>U</em><sup>⟂</sup></span>中的一个向量。</p>
-<p>若<span class="math inline"><em>U</em></span>和<span class="math inline"><em>U</em>⟂</span>都为<span class="math inline"><em>R</em><sup><em>n</em></sup></span>的子空间，则有以下性质</p>
+<p>直观上：子空间<span class="math inline">\(U\)</span>和正交补空间<span class="math inline">\(U^{\perp}\)</span>的和构成了整个空间，即该空间中的一个向量可以分解为<span class="math inline">\(U\)</span>中的一个向量加上<span class="math inline">\(U^\perp\)</span>中的一个向量。</p>
+<p>若<span class="math inline">\(U\)</span>和<span class="math inline">\(U\perp\)</span>都为<span class="math inline">\(R^n\)</span>的子空间，则有以下性质</p>
 <ol type="1">
-<li><span class="math inline"><em>d</em><em>i</em><em>m</em><em>U</em> + <em>d</em><em>i</em><em>m</em><em>U</em><sup>⟂</sup> = <em>n</em></span></li>
+<li><span class="math inline">\(dimU + dimU^\perp = n\)</span></li>
 </ol>
 <h2 id="四个子空间之间的关系">四个子空间之间的关系</h2>
 <p><img src="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/四个子空间之间的关系.png"></p>
 <ol type="1">
 <li>列空间和左零空间相互正交</li>
 <li>行空间和零空间相互正交</li>
-<li>方程<span class="math inline"><em>A</em><em>x</em> = <em>b</em></span>中的x位于<span class="math inline"><em>R</em><sup><em>n</em></sup></span>空间中</li>
+<li>方程<span class="math inline">\(Ax=b\)</span>中的x位于<span class="math inline">\(R^n\)</span>空间中</li>
 <li>若矩阵A可逆，行空间中的所有向量与列空间中的向量一一对应</li>
 </ol>
 <h3 id="第二点的证明如下">第二点的证明如下:</h3>
@@ -287,10 +287,11 @@
 线性组合构成行空间中的任意一个向量</li>
 </ol>
 <p>除此之外可以用代数的方法证明：</p>
-<p><span class="math display"><em>x</em><sup><em>T</em></sup>(<em>A</em><sup><em>T</em></sup><em>y</em>) = (<em>A</em><em>x</em>)<sup><em>T</em></sup><em>y</em> = 0</span></p>
+<p><span class="math display">\[x^T(A^T y) = (Ax)^T y = 0\]</span></p>
 <h3 id="第三第四点证明如下">第三第四点证明如下:</h3>
-<p>第三点很显然，因为x有n个分量，肯定在<span class="math inline"><em>R</em><sup><em>n</em></sup></span>中，根据正交补空间的性质，x就可以分解为<span class="math inline"><em>x</em> = <em>x</em><sub><em>r</em><em>o</em><em>w</em></sub> + <em>x</em><sub><em>n</em><em>u</em><em>l</em><em>l</em></sub></span></p>
-<p>故 <span class="math display"><em>A</em><em>x</em> = <em>A</em>(<em>x</em><sub><em>r</em><em>o</em><em>w</em></sub> + <em>x</em><sub><em>n</em><em>u</em><em>l</em><em>l</em></sub>) = <em>A</em><em>x</em><sub><em>r</em><em>o</em><em>w</em></sub> + 0</span></p>
+<p>第三点很显然，因为x有n个分量，肯定在<span class="math inline">\(R^n\)</span>中，根据正交补空间的性质，x就可以分解为<span class="math inline">\(x = x_{row} + x_{null}\)</span></p>
+<p>故 <span class="math display">\[Ax = A(x_{row} + x_{null}) = Ax_{row}
++ 0\]</span></p>
 <p>当矩阵A不可逆的时候是做不到列空间中的向量与行空间中的向量一一对应的，因为存在着零空间的分量。但是当可逆的时候，零空间只有0。</p>
 </body></html>
     </div>
@@ -314,7 +315,10 @@
     <a href="/2025/11/06/helloworld/" rel="prev" title="helloworld">
       <i class="fa fa-chevron-left"></i> helloworld
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/" rel="next" title="信息论与编码2">
+      信息论与编码2 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -389,20 +393,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
