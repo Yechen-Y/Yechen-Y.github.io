@@ -6,7 +6,7 @@
   <link href="https://www.yechenblog.top/atom.xml" rel="self"/>
   
   <link href="https://www.yechenblog.top/"/>
-  <updated>2025-11-09T05:58:15.444Z</updated>
+  <updated>2025-11-11T15:42:37.960Z</updated>
   <id>https://www.yechenblog.top/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随机信号处理-功率谱</title>
+    <link href="https://www.yechenblog.top/2025/11/11/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%8A%9F%E7%8E%87%E8%B0%B1/"/>
+    <id>https://www.yechenblog.top/2025/11/11/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%8A%9F%E7%8E%87%E8%B0%B1/</id>
+    <published>2025-11-11T15:42:37.000Z</published>
+    <updated>2025-11-11T15:42:37.960Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>只为了考试！</p><h2 id="过程的一些数字特征">过程的一些数字特征</h2><ol type="1"><li>均值<ul><li>若频域连续则均值为0</li></ul></li><li>自相关函数</li><li>自相关系数</li><li>方差/协方差</li><li>相关时间</li><li>平均功率</li><li>总功率</li><li>直流功率</li><li>交流功率</li><li>总功率</li></ol><h2 id="宽平稳过程">宽平稳过程</h2><p>经常用到的公式: 三角形的和差化积</p><h2 id="功率谱密度">功率谱密度</h2><p>常用性质: 频域时移</p><h2 id="白噪声">白噪声</h2></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;只为了考试！
+
+过程的一些数字特征
+ 1.  均值 * 若频域连续则均值为0
+     
+     
+ 2.  自相关函数
+ 3.  自相关系数
+ 4.  方差/协方差
+ 5.  相关时间
+ 6.  平均功率
+ 7.  总功率
+ 8.  直流功率
+ 9.  交流功率
+ 10. 总功率
+
+宽平稳过程
+经常用到的公式: 三角形的和差化积
+
+功率谱密度
+常用性质: 频域时移
+
+白噪声&lt;/body&gt;&lt;/html&gt;</summary>
+    
+    
+    
+    <category term="本科课程" scheme="https://www.yechenblog.top/categories/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="随机信号处理" scheme="https://www.yechenblog.top/categories/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="本科课程" scheme="https://www.yechenblog.top/tags/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="随机信号处理" scheme="https://www.yechenblog.top/tags/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>初识GTKWAVE</title>

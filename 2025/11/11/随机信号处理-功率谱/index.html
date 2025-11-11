@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"www.yechenblog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="道路曲折 光明在前">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yechen&#39;s Blog">
-<meta property="og:url" content="https://www.yechenblog.top/categories/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/index.html">
+  <meta name="description" content="只为了考试！  过程的一些数字特征  1.  均值 * 若频域连续则均值为0              2.  自相关函数  3.  自相关系数  4.  方差&#x2F;协方差  5.  相关时间  6.  平均功率  7.  总功率  8.  直流功率  9.  交流功率  10. 总功率  宽平稳过程 经常用到的公式: 三角形的和差化积  功率谱密度 常用性质: 频域时移  白噪声">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随机信号处理-功率谱">
+<meta property="og:url" content="https://www.yechenblog.top/2025/11/11/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%8A%9F%E7%8E%87%E8%B0%B1/index.html">
 <meta property="og:site_name" content="Yechen&#39;s Blog">
-<meta property="og:description" content="道路曲折 光明在前">
+<meta property="og:description" content="只为了考试！  过程的一些数字特征  1.  均值 * 若频域连续则均值为0              2.  自相关函数  3.  自相关系数  4.  方差&#x2F;协方差  5.  相关时间  6.  平均功率  7.  总功率  8.  直流功率  9.  交流功率  10. 总功率  宽平稳过程 经常用到的公式: 三角形的和差化积  功率谱密度 常用性质: 频域时移  白噪声">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-11T15:42:37.000Z">
+<meta property="article:modified_time" content="2025-11-11T15:42:37.960Z">
 <meta property="article:author" content="Yechen">
+<meta property="article:tag" content="本科课程">
+<meta property="article:tag" content="随机信号处理">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yechenblog.top/categories/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/">
+<link rel="canonical" href="https://www.yechenblog.top/2025/11/11/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%8A%9F%E7%8E%87%E8%B0%B1/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 一生一芯 | Yechen's Blog</title>
+  <title>随机信号处理-功率谱 | Yechen's Blog</title>
   
 
 
@@ -192,71 +196,114 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">一生一芯
-          <small>分类</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yechenblog.top/2025/11/11/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%8A%9F%E7%8E%87%E8%B0%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Liulian1.png">
+      <meta itemprop="name" content="Yechen">
+      <meta itemprop="description" content="道路曲折 光明在前">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yechen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          随机信号处理-功率谱
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-11-11 23:42:37" itemprop="dateCreated datePublished" datetime="2025-11-11T23:42:37+08:00">2025-11-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">本科课程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">随机信号处理</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>只为了考试！</p>
+<h2 id="过程的一些数字特征">过程的一些数字特征</h2>
+<ol type="1">
+<li>均值
+<ul>
+<li>若频域连续则均值为0</li>
+</ul></li>
+<li>自相关函数</li>
+<li>自相关系数</li>
+<li>方差/协方差</li>
+<li>相关时间</li>
+<li>平均功率</li>
+<li>总功率</li>
+<li>直流功率</li>
+<li>交流功率</li>
+<li>总功率</li>
+</ol>
+<h2 id="宽平稳过程">宽平稳过程</h2>
+<p>经常用到的公式: 三角形的和差化积</p>
+<h2 id="功率谱密度">功率谱密度</h2>
+<p>常用性质: 频域时移</p>
+<h2 id="白噪声">白噪声</h2>
+</body></html>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-08T10:20:20+08:00"
-              content="2025-11-08">
-          11-08
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B/" rel="tag"># 本科课程</a>
+              <a href="/tags/%E9%9A%8F%E6%9C%BA%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" rel="tag"># 随机信号处理</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/" itemprop="url">
-            <span itemprop="name">初识GTKWAVE</span>
-          </a>
-      </div>
+        
 
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-07T22:57:00+08:00"
-              content="2025-11-07">
-          11-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/07/%E5%88%9D%E8%AF%86Verilator/" itemprop="url">
-            <span itemprop="name">初识Verilator</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/" rel="prev" title="初识GTKWAVE">
+      <i class="fa fa-chevron-left"></i> 初识GTKWAVE
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
@@ -309,6 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="nav-number">1.</span> <span class="nav-text">过程的一些数字特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%BD%E5%B9%B3%E7%A8%B3%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">宽平稳过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text">功率谱密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BD%E5%99%AA%E5%A3%B0"><span class="nav-number">4.</span> <span class="nav-text">白噪声</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
