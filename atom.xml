@@ -6,7 +6,7 @@
   <link href="https://www.yechenblog.top/atom.xml" rel="self"/>
   
   <link href="https://www.yechenblog.top/"/>
-  <updated>2025-11-08T02:17:47.950Z</updated>
+  <updated>2025-11-09T05:58:15.444Z</updated>
   <id>https://www.yechenblog.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初识GTKWAVE</title>
+    <link href="https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/"/>
+    <id>https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/</id>
+    <published>2025-11-08T02:20:20.000Z</published>
+    <updated>2025-11-09T05:58:15.444Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h2 id="编写testbench生成仿真文件">编写testbench生成仿真文件</h2></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;编写testbench生成仿真文件&lt;/body&gt;&lt;/html&gt;</summary>
+    
+    
+    
+    <category term="一生一芯" scheme="https://www.yechenblog.top/categories/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/"/>
+    
+    
+    <category term="一生一芯" scheme="https://www.yechenblog.top/tags/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/"/>
+    
+    <category term="工具" scheme="https://www.yechenblog.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>初识Verilator</title>
@@ -84,9 +107,9 @@ Verilator Comma&lt;/body&gt;&lt;/html&gt;</summary>
     <link href="https://www.yechenblog.top/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/"/>
     <id>https://www.yechenblog.top/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/</id>
     <published>2025-11-07T10:09:13.000Z</published>
-    <updated>2025-11-07T12:52:31.726Z</updated>
+    <updated>2025-11-11T14:26:27.551Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h2 id="联合熵条件熵熵">联合熵、条件熵、熵</h2><p><span class="math display">\[ H(X, Y) = H(X) + H (Y|X)\]</span></p><p>proof:</p><p><span class="math display">\[\begin{aligned}H(X,Y)&amp;= -\sum_{x,y} p(x,y)\,\log p(x,y) \\&amp;= -\sum_{x,y} p(x,y)\,\log\!\big(p(x)\,p(y\mid x)\big) \\&amp;= -\sum_{x,y} p(x,y)\,\log p(x) \;-\; \sum_{x,y} p(x,y)\,\logp(y\mid x) \\&amp;= -\sum_{x} \Big(\sum_y p(x,y)\Big)\log p(x)   \;-\; \sum_x p(x)\sum_y p(y\mid x)\,\log p(y\mid x) \\&amp;= -\sum_x p(x)\log p(x)   \;+\; \sum_x p(x)\,\Big(-\sum_y p(y\mid x)\log p(y\mid x)\Big) \\&amp;= H(X) \;+\; \sum_x p(x)\,H(Y\mid X{=}x) \\&amp;= H(X)+H(Y\mid X).\end{aligned}\]</span></p><h2 id="记忆信源与无记忆信源">记忆信源与无记忆信源</h2><ul><li><p>记忆信源：符号出现的概率与之前出现过的符号有关</p></li><li><p>无记忆信源：符号出现的概率与之前出现过符号的概率无关，只由符号自身的概率决定</p></li></ul><p>tips: 离散信源的输出是一个符号表{x1, x2, x3…}</p><h2 id="二重信源">二重信源</h2><p>def: 把原信源连续的两个符号当成一个新符号来看的那个新信源</p><h2 id="马尔科夫信源">马尔科夫信源</h2><p>def: 即有记忆的离散信源</p><p>k阶马尔科夫信源：当前输出符号与前k个符号有关</p><h3 id="状态转移">状态转移</h3><p>类似于FSM（有限状态机）。 <a href="https://zh.wikipedia.org/wiki/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA">wikiabout FSM</a></p><h3 id="马尔科夫信源熵">马尔科夫信源熵</h3><ul><li><p>从一个状态到另一个状态发生转移并发出一个符号的熵</p></li><li><p>信源平均输出一个符号的熵（每个状态的熵的均值）</p></li></ul><h3 id="冗余度">冗余度</h3><p>def: <span class="math display">\[ R = 1 -\frac{H(x)}{H_{max}}\]</span></p><p>这里的 <span class="math inline">\(\frac{H(x)}{H_{max}}\)</span>也叫信源效率</p><p>该值越大说明符号之间的相关性越强，</p><h3 id="时间熵">时间熵</h3><p>def：平均每秒传递的信息量 (bit/s)</p><p>formular：</p><p><span class="math display">\[H_t = H(X) / E(T)\]</span></p><p>其中<span class="math inline">\(E(T)\)</span>为发送一个符号的平均时间，<span class="math inline">\(H(X)\)</span>为信源熵即一个符号带有的信息量</p><h2 id="编码">编码</h2><p>def: 为信源发出的每个符号进行编码</p><h3 id="香农编码">香农编码</h3><p>如何进行香农编码: <img src="/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/香农编码.png" width="500"></p><h3 id="哈夫曼编码">哈夫曼编码</h3><p>如何进行哈夫曼编码: <a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81#:~:text=Fig.1%E3%80%82-,%E6%BC%94%E7%AE%97%E8%BF%87%E7%A8%8B,-%5B%E7%BC%96%E8%BE%91%5D">wikiabout Huffman</a></p><h3 id="编码速率和编码效率">编码速率和编码效率</h3><p>def: 编码速率即平均码长（bit/符号）</p><p><span class="math display">\[\bar L = \sum_{i=1}^{\infty}p_i\,l_i\]</span></p><p>def: 编码效率即信源熵/平均码长</p><p><span class="math display">\[\eta = \frac{H(X)}{\bar{L}}\]</span></p><p>重要关系</p><ul><li><span class="math inline">\(H(X) \leq \bar L\)</span></li></ul><p>即信源熵是平均码长的下界，信源熵是一个信源发出一个符号带来的<strong>平均不确定度/信息量（需要多少bit去表示这个符号的发生）</strong>，而平均码长就是该编码表示一个符号的平均bits，当二者越接近说明这种编码方式的效率越高.</p><h2 id="question">Question</h2><ol type="1"><li>几何级数和几何级数求导求和？</li></ol></body></html>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h2 id="联合熵条件熵熵">联合熵、条件熵、熵</h2><p><span class="math display">\[ H(X, Y) = H(X) + H (Y|X)\]</span></p><p>proof:</p><p><span class="math display">\[\begin{aligned}H(X,Y)&amp;= -\sum_{x,y} p(x,y)\,\log p(x,y) \\&amp;= -\sum_{x,y} p(x,y)\,\log\!\big(p(x)\,p(y\mid x)\big) \\&amp;= -\sum_{x,y} p(x,y)\,\log p(x) \;-\; \sum_{x,y} p(x,y)\,\logp(y\mid x) \\&amp;= -\sum_{x} \Big(\sum_y p(x,y)\Big)\log p(x)   \;-\; \sum_x p(x)\sum_y p(y\mid x)\,\log p(y\mid x) \\&amp;= -\sum_x p(x)\log p(x)   \;+\; \sum_x p(x)\,\Big(-\sum_y p(y\mid x)\log p(y\mid x)\Big) \\&amp;= H(X) \;+\; \sum_x p(x)\,H(Y\mid X{=}x) \\&amp;= H(X)+H(Y\mid X).\end{aligned}\]</span></p><h2 id="记忆信源与无记忆信源">记忆信源与无记忆信源</h2><ul><li><p>记忆信源：符号出现的概率与之前出现过的符号有关</p></li><li><p>无记忆信源：符号出现的概率与之前出现过符号的概率无关，只由符号自身的概率决定</p></li></ul><p>tips: 离散信源的输出是一个符号表{x1, x2, x3…}</p><h2 id="二重信源">二重信源</h2><p>def: 把原信源连续的两个符号当成一个新符号来看的那个新信源</p><h2 id="马尔科夫信源">马尔科夫信源</h2><p>def: 即有记忆的离散信源</p><p>k阶马尔科夫信源：当前输出符号与前k个符号有关</p><h3 id="状态转移">状态转移</h3><p>类似于FSM（有限状态机）。 <a href="https://zh.wikipedia.org/wiki/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA">wikiabout FSM</a></p><h3 id="马尔科夫信源熵">马尔科夫信源熵</h3><ul><li><p>从一个状态到另一个状态发生转移并发出一个符号的熵</p></li><li><p>信源平均输出一个符号的熵（每个状态的熵的均值）</p></li></ul><h3 id="冗余度">冗余度</h3><p>def: <span class="math display">\[ R = 1 -\frac{H(x)}{H_{max}}\]</span></p><p>这里的 <span class="math inline">\(\frac{H(x)}{H_{max}}\)</span>也叫信源效率</p><p>该值越大说明符号之间的相关性越强，</p><h3 id="时间熵">时间熵</h3><p>def：平均每秒传递的信息量 (bit/s)</p><p>formular：</p><p><span class="math display">\[H_t = H(X) / E(T)\]</span></p><p>其中<span class="math inline">\(E(T)\)</span>为发送一个符号的平均时间，<span class="math inline">\(H(X)\)</span>为信源熵即一个符号带有的信息量</p><h2 id="编码">编码</h2><p>def: 为信源发出的每个符号进行编码</p><h3 id="香农编码">香农编码</h3><p>如何进行香农编码: <img src="/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/香农编码.png" width="500"></p><h3 id="哈夫曼编码">哈夫曼编码</h3><p>如何进行哈夫曼编码: <a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81#:~:text=Fig.1%E3%80%82-,%E6%BC%94%E7%AE%97%E8%BF%87%E7%A8%8B,-%5B%E7%BC%96%E8%BE%91%5D">wikiabout Huffman</a></p><h3 id="编码速率和编码效率">编码速率和编码效率</h3><p>def: 编码速率即平均码长（bit/符号）</p><p><span class="math display">\[\bar L = \sum_{i=1}^{\infty}p_i\,l_i\]</span></p><p>def: 编码效率即信源熵/平均码长</p><p><span class="math display">\[\eta = \frac{H(X)}{\bar{L}}\]</span></p><p>重要关系</p><ul><li><span class="math inline">\(H(X) \leq \bar L\)</span></li></ul><p>即信源熵是平均码长的下界，信源熵是一个信源发出一个符号带来的<strong>平均不确定度/信息量（需要多少bit去表示这个符号的发生）</strong>，而平均码长就是该编码表示一个符号的平均bits，当二者越接近说明这种编码方式的效率越高.</p><h2 id="离散信道容量">离散信道容量</h2><p>Reveiw:</p><p><code>互信息(Mutual Information)</code>:是一个衡量“知道一个变量能减少另一个变量多少不确定性”的量，或者说二者<strong><em>共享的信息量</em></strong>。</p><p>数学定义为:<span class="math inline">\(I(X;Y) = H(X) -H(X|Y)\)</span></p><h3 id="信道容量">信道容量</h3><table><colgroup><col style="width: 22%"><col style="width: 44%"><col style="width: 33%"></colgroup><thead><tr><th>目标</th><th>量</th><th>意义</th></tr></thead><tbody><tr><td>想看输出反映输入多少</td><td><span class="math inline">\(I(X;Y)\)</span></td><td>输入输出共享信息量</td></tr><tr><td>想找信道能力上限</td><td><span class="math inline">\(\max_{p(x)} I(X;Y)\)</span></td><td>最优输入分布下的最大共享信息量</td></tr></tbody></table><p>数学定义:</p><p><span class="math display">\[C =\max_{p(x)} I(X;Y)\]</span></p><p>当信道矩阵(转移概率矩阵)对称时有:</p><p><span class="math display">\[C = log_{2}M - H(Y|X)\]</span></p><h3 id="理想观测器">理想观测器</h3><p>什么是理想观测器(摘自ChatGPT5) <img src="/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/理想观测器.png"></p><p>即根据条件概率选择当观测到某个y时，它的输入为x。</p><h3 id="误判概率">误判概率</h3><p>设计的理想观测器的误判概率</p><h2 id="question">Question</h2><ol type="1"><li>几何级数和几何级数求导求和？</li></ol></body></html>]]></content>
     
     
     <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;联合熵、条件熵、熵

@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"www.yechenblog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="道路曲折 光明在前">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yechen&#39;s Blog">
-<meta property="og:url" content="https://www.yechenblog.top/archives/index.html">
+  <meta name="description" content="编写testbench生成仿真文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识GTKWAVE">
+<meta property="og:url" content="https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/index.html">
 <meta property="og:site_name" content="Yechen&#39;s Blog">
-<meta property="og:description" content="道路曲折 光明在前">
+<meta property="og:description" content="编写testbench生成仿真文件">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-08T02:20:20.000Z">
+<meta property="article:modified_time" content="2025-11-09T05:58:15.444Z">
 <meta property="article:author" content="Yechen">
+<meta property="article:tag" content="一生一芯">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yechenblog.top/archives/">
+<link rel="canonical" href="https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Yechen's Blog</title>
+  <title>初识GTKWAVE | Yechen's Blog</title>
   
 
 
@@ -192,150 +196,96 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 6 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Liulian1.png">
+      <meta itemprop="name" content="Yechen">
+      <meta itemprop="description" content="道路曲折 光明在前">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yechen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初识GTKWAVE
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-11-08 10:20:20" itemprop="dateCreated datePublished" datetime="2025-11-08T10:20:20+08:00">2025-11-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-11-09 13:58:15" itemprop="dateModified" datetime="2025-11-09T13:58:15+08:00">2025-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" itemprop="url" rel="index"><span itemprop="name">一生一芯</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h2 id="编写testbench生成仿真文件">编写testbench生成仿真文件</h2>
+</body></html>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-08T10:20:20+08:00"
-              content="2025-11-08">
-          11-08
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag"># 一生一芯</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/" itemprop="url">
-            <span itemprop="name">初识GTKWAVE</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-07T22:57:00+08:00"
-              content="2025-11-07">
-          11-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/07/%E5%88%9D%E8%AF%86Verilator/" itemprop="url">
-            <span itemprop="name">初识Verilator</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-07T22:35:41+08:00"
-              content="2025-11-07">
-          11-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/07/%E9%9A%8F%E8%AE%B01/" itemprop="url">
-            <span itemprop="name">随记1</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-07T18:09:13+08:00"
-              content="2025-11-07">
-          11-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/07/%E4%BF%A1%E6%81%AF%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A0%812/" itemprop="url">
-            <span itemprop="name">信息论与编码2</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-07T00:50:01+08:00"
-              content="2025-11-07">
-          11-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/07/4-1-Orthogonality-of-the-four-subspaces/" itemprop="url">
-            <span itemprop="name">4.1 Orthogonality of the four subspaces</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-11-06T21:51:27+08:00"
-              content="2025-11-06">
-          11-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/11/06/helloworld/" itemprop="url">
-            <span itemprop="name">helloworld</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        
 
 
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/07/%E5%88%9D%E8%AF%86Verilator/" rel="prev" title="初识Verilator">
+      <i class="fa fa-chevron-left"></i> 初识Verilator
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
@@ -388,6 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99testbench%E7%94%9F%E6%88%90%E4%BB%BF%E7%9C%9F%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">编写testbench生成仿真文件</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
