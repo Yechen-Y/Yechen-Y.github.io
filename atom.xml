@@ -6,7 +6,7 @@
   <link href="https://www.yechenblog.top/atom.xml" rel="self"/>
   
   <link href="https://www.yechenblog.top/"/>
-  <updated>2025-11-12T03:51:36.366Z</updated>
+  <updated>2025-11-12T08:03:59.537Z</updated>
   <id>https://www.yechenblog.top/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Projection Matrices and Least Squares</title>
+    <link href="https://www.yechenblog.top/2025/11/12/Projection-Matrices-and-Least-Squares/"/>
+    <id>https://www.yechenblog.top/2025/11/12/Projection-Matrices-and-Least-Squares/</id>
+    <published>2025-11-12T08:03:59.000Z</published>
+    <updated>2025-11-12T08:03:59.537Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h1 id="投影projection">投影(Projection)</h1><h2 id="概要">概要</h2><p><img src="/2025/11/12/Projection-Matrices-and-Least-Squares/projectionConclusion.png"></p><h2 id="投影矩阵投影误差向量">投影矩阵、投影、误差向量</h2><p>目标: 找出向量b在空间S上的投影p，以及产生p的矩阵P</p><p>误差向量: <span class="math inline">\(e = b - p = A \hatx\)</span></p><p>tips: A 是空间 S 的基向量构成的矩阵</p><p>方法: 根据几何关系可以得到<span class="math inline">\(e\)</span>与空间S正交。描述一个空间的最好方法就是用<strong>基向量</strong>描述，<strong><em>把基向量放入矩阵A中，该矩阵的列空间即为空间S</em></strong>，由<span class="math inline">\(e \perp S\)</span>，得到<span class="math inline">\(e \inLN(S)\)</span>，即误差向量在S的左零空间中。</p><p>下图是图例: <img src="/2025/11/12/Projection-Matrices-and-Least-Squares/投影图例.png"></p><p>由上述关系可得:</p><p><span class="math display">\[\begin{aligned}A^\top (b - A\hat x) &amp;= 0 \\\hat x &amp;= (A^\top A)^{-1}A^\top b \\p &amp;= Ax = A(A^\top A)^{-1}A^\top b \\P &amp;= A(A^\top A)^{-1}A^\top\end{aligned}\]</span></p></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;投影(Projection)
+概要
+
+
+投影矩阵、投影、误差向量
+目标: 找出向量b在空间S上的投影p，以及产生p的矩阵P
+
+误差向量: &#92;(e = b - p = A &#92;hat x&#92;)
+
+tips: A 是空间 S 的基向量构成的矩阵
+
+方法: 根据几何关系可以得到&#92;(e&#92;)与空间S正交。描述一个空间的最好方法就是用基向量描述，把基向量放入矩阵A中，该矩阵的列空间即为空间S，由&#92;(e &#92;perp S&#92;)，得到&#92;(e &#92;in LN(S)&#92;)，即误差向量在S的左零空间中。
+
+下图是图例: 
+
+由上述关系可得:
+
+&#92;[ &#92;begin{aligned} A^&#92;top (b - A&#92;hat x) &amp;amp;=&lt;/body&gt;&lt;/html&gt;</summary>
+    
+    
+    
+    <category term="线性代数" scheme="https://www.yechenblog.top/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+    
+    <category term="线性代数" scheme="https://www.yechenblog.top/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+    <category term="数学" scheme="https://www.yechenblog.top/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随记2</title>
+    <link href="https://www.yechenblog.top/2025/11/12/%E9%9A%8F%E8%AE%B02/"/>
+    <id>https://www.yechenblog.top/2025/11/12/%E9%9A%8F%E8%AE%B02/</id>
+    <published>2025-11-12T07:21:56.000Z</published>
+    <updated>2025-11-12T07:23:33.305Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>路还很长，对自己不要太严格了，take it easy.</p></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;路还很长，对自己不要太严格了，take it easy.&lt;/body&gt;&lt;/html&gt;</summary>
+    
+    
+    
+    <category term="随记" scheme="https://www.yechenblog.top/categories/%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="随记" scheme="https://www.yechenblog.top/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>随机信号处理-功率谱</title>
@@ -59,7 +120,7 @@
     <link href="https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/"/>
     <id>https://www.yechenblog.top/2025/11/08/%E5%88%9D%E8%AF%86GTKWAVE/</id>
     <published>2025-11-08T02:20:20.000Z</published>
-    <updated>2025-11-09T05:58:15.444Z</updated>
+    <updated>2025-11-12T03:51:48.693Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h2 id="编写testbench生成仿真文件">编写testbench生成仿真文件</h2></body></html>]]></content>
     
