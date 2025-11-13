@@ -221,10 +221,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-11-12 16:50:52 / 修改时间：20:56:33" itemprop="dateCreated datePublished" datetime="2025-11-12T16:50:52+08:00">2025-11-12</time>
+              <time title="创建时间：2025-11-12 16:50:52" itemprop="dateCreated datePublished" datetime="2025-11-12T16:50:52+08:00">2025-11-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-11-13 23:40:50" itemprop="dateModified" datetime="2025-11-13T23:40:50+08:00">2025-11-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -246,7 +252,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <html><head></head><body>Makefile</body></html>
+          <html><head></head><body>Makefile
+为了搞懂NVBoard是怎么工作的，先看一下它的构建规则是怎么样的
+
+其构建规则在/scripts/nvboard.mk中，Makefile的一些补充知识
+
+ 1. 自动变量:
+    
+    $@: 目标
+    
+    $&lt;: 第一个依赖
+    
+    $^: 所有依赖(去重)
+    
+    $+: 所有依赖(不去重)
+    
+    
+ 2. 命令前加@，不在终端中显示该命令，但仍会显示输出
+    
+    
+ 3. 内建变量:
+    
+    CXX: cpp编译器
+    
+    CC: c编译器
+    
+    CPPFLAGS: 编译器选项</body></html>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2025/11/12/%E6%8E%A5%E5%85%A5NVBoard/#more" rel="contents">
@@ -562,7 +593,7 @@ tips: A 是空间 S 的基向量构成的矩阵
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-11-12 20:58:02" itemprop="dateModified" datetime="2025-11-12T20:58:02+08:00">2025-11-12</time>
+                <time title="修改时间：2025-11-12 21:04:39" itemprop="dateModified" datetime="2025-11-12T21:04:39+08:00">2025-11-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1170,7 +1201,7 @@ Ex:
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
