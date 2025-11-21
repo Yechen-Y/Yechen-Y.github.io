@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>信息的表示和处理</title>
+      <link href="/2025/11/19/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/"/>
+      <url>/2025/11/19/%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><h1 id="码制">码制</h1><p>不同的 <code>码制</code> 即对 <code>位模式</code>做出不同的解释。</p><table><thead><tr><th style="text-align: center;">原码</th><th style="text-align: center;">反码</th><th style="text-align: center;">补码</th></tr></thead><tbody><tr><td style="text-align: center;">最高位作为符号位</td><td style="text-align: center;"><span class="math inline">\(-2^{w - 1} -1\)</span></td><td style="text-align: center;"><span class="math inline">\(-2^w\)</span></td></tr><tr><td style="text-align: center;">符号位取反</td><td style="text-align: center;">$2^w - 1 - x $</td><td style="text-align: center;">$2^w - x $</td></tr></tbody></table><p>第二行是不同码制对最高位的解释，第三行是已知 <code>x</code> 如何求<code>-x</code> 的表示</p><h2 id="原码">原码</h2><p>为了区分正数和负数，用最高位当作符号位。这样符合人类的直觉，但对计算机计算很不友好。比如:</p><p>计算 <span class="math inline">\(1 + (-1)\)</span></p><ul><li>原码表示 <code>0001</code> + <code>1001</code></li><li>如果是纯加法电路会得到 <code>0001</code> + <code>1001</code> =<code>1010</code> (结果为-2)，计算有误。</li></ul><p>这意味着，如果用原码来表示数字，CPU的计算单元(ALU)必须设计的十分复杂。他必须先判断符号位:</p><ol type="1"><li>如果符号相同做加法</li><li>如果符号不相同，比较绝对值的大小，用大的减小的，最后决定结果的符号。</li></ol><p>为了解决这一问题，就有了反码</p><h2 id="反码">反码</h2><p>要了解反码，就要了解反码是怎么来的</p><h3 id="反码的来源">反码的来源</h3><blockquote><p>早在机械计算器时代（比如 17世纪帕斯卡的加法机），人们就在思考：“怎样把该死的减法变成加法？”因为制造一个能倒着转、能处理“借位”的齿轮装置，比制造一个只管顺着转、只管“进位”的装置要复杂得多。</p></blockquote><p>比如有个只能处理 <code>0~99</code> 的机器，我们要计算<code>56 - 13</code>，但是我们不想让其倒着转(减法)，我们可以通过让<code>56</code> 加上 <code>13</code> 的反码<code>99 - 13 = 86</code>，让机器一直顺着转(加法)，即可。最后得到的结果为<span class="math display">\[ 56 + 86 = 142\]</span></p><p>与正确结果有误差，我们只用把进位 <code>1</code> 加上即可<code>42 + 1 = 43</code></p><h3 id="二进制中的反码">二进制中的反码</h3><p>根据上述的故事，我们就可以定义反码了:</p><p><span class="math display">\[-x_反 = 2^w - 1 - x_反\]</span> 即用<code>11111...11</code> -<code>x</code>，这在电路中非常容易实现，只需用一个<code>反相器(NOT GATE)</code> 即可。</p><p>根据这个定义，我们就可以推导出最高位的数值为 <span class="math inline">\(2^{w-1} - 1\)</span></p><h4 id="处理溢出">处理溢出</h4><p>计算 <span class="math inline">\(A - B\)</span></p><ol type="1"><li><p>A &gt; B <span class="math display">\[\begin{aligned}A + (2^w - 1 - B) &amp;= 2^w + (A - B - 1) \\&amp;= A - B - 1\end{aligned}\]</span> 最后得到的结果比实际的结果少1</p></li><li><p>A &lt; B <span class="math display">\[\begin{aligned}A + (2^w - 1 - B) &amp;= 2^w - 1 - (B - A)\end{aligned}\]</span>最后得到<code>B - A</code>的反码表示，与结果符合(因为<code>B - A</code>的反码的值就是<code>-(B - A)</code>= <code>A - B</code>)</p></li></ol><h2 id="补码">补码</h2><p>为了解决反码中溢出的问题，我们定义:</p><p><span class="math display">\[ -x_补 = 2^w - x_补\]</span></p><p>通过该定义也可以推导出，补码最高位的数值为<span class="math inline">\(-2^{w-1}\)</span></p><h3 id="补码与反码的关系">补码与反码的关系</h3><p>&amp;&amp; -x_补 = -x_反 + 1&amp;&amp;</p><p>推导如下:</p><p><span class="math display">\[\begin{aligned}-x_补 &amp;= 2^w - x_补 \\&amp;= (2^w - 1 - x_补) + 1 \\&amp;= -x_反 + 1\end{aligned}\]</span></p></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>从c语言到二进制代码</title>
+      <link href="/2025/11/19/%E4%BB%8Ec%E8%AF%AD%E8%A8%80%E5%88%B0%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BB%A3%E7%A0%81/"/>
+      <url>/2025/11/19/%E4%BB%8Ec%E8%AF%AD%E8%A8%80%E5%88%B0%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BB%A3%E7%A0%81/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>从c语言到二进制代码可分为</p><p><code>预处理</code> -&gt; <code>编译</code> -&gt; <code>汇编</code>-&gt; <code>链接</code> 这四个过程</p><h2 id="预处理">预处理</h2></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 一生一芯 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 一生一芯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随记3</title>
+      <link href="/2025/11/18/%E9%9A%8F%E8%AE%B03/"/>
+      <url>/2025/11/18/%E9%9A%8F%E8%AE%B03/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body><p>我是个很幸运的人，在这21年中我受到了来自很多人的帮助和关爱。即使我也受到了很多挫折，但是幸运的是我没被打倒。</p><p>最近几年发生了很多事，可以说是彻底改变了我。我的女朋友给予了我很大帮助，我非常非常感谢她，也觉得非常幸运能遇到她。</p></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>接入NVBoard</title>
       <link href="/2025/11/12/%E6%8E%A5%E5%85%A5NVBoard/"/>
       <url>/2025/11/12/%E6%8E%A5%E5%85%A5NVBoard/</url>
