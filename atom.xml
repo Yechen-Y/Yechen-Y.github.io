@@ -6,7 +6,7 @@
   <link href="https://www.yechenblog.top/atom.xml" rel="self"/>
   
   <link href="https://www.yechenblog.top/"/>
-  <updated>2025-11-24T12:07:53.532Z</updated>
+  <updated>2025-11-25T02:46:13.429Z</updated>
   <id>https://www.yechenblog.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Verilog中的事件调度</title>
+    <link href="https://www.yechenblog.top/2025/11/25/Verilog%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%B0%83%E5%BA%A6/"/>
+    <id>https://www.yechenblog.top/2025/11/25/Verilog%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%B0%83%E5%BA%A6/</id>
+    <published>2025-11-25T02:46:13.000Z</published>
+    <updated>2025-11-25T02:46:13.429Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><html><head></head><body></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>无符号和补码共用一个加法器</title>
